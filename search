@@ -1,0 +1,16 @@
+a = [5, 8, 7, 8, 8, 8, 1, 8]
+# output >>> ([5, 8, 7, 8, 8, 8, 1, 8] , 8) >> index = [1, 3, 4, 5, 7]
+def search(arr, num):
+    p0 = 0
+    p1 = len(arr) - 1
+    result = []
+    if num in arr:
+        while p0 <= p1:
+            if arr[p0] == num:
+                result.append(arr.index(arr[p0]))
+                arr[p0] = ""
+            p0 = p0 + 1
+        return result
+    else:
+        return f'{num} is not found'
+print(search(a,8))
